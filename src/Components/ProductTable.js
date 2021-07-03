@@ -1,5 +1,6 @@
-import { react, Component } from "react";
-import json from '..data.json/';
+import React from 'react';
+import { Component } from 'react';
+import json from '../data.json'
 import ProductRow from './ProductRow'
 
 
@@ -31,6 +32,7 @@ class ProductTable extends Component {
                     })}
                 </tbody>
             </table>
+
         )
     }
 }
