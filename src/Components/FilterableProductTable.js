@@ -1,16 +1,23 @@
 import React from 'react';
-import { Component } from 'react';
+import ProductRow from './ProductRow';
 import ProductTable from './ProductTable';
 import SearchBar from './SearchBar';
 
-class FilterableProductTable extends Component {
+class FilterableProductTable extends React.Component {
 
+
+    handleQuery = (ev) => {
+        this.setState({
+            query: ev.target.value
+        })
+    }
 
     render() {
         return (<div>
             <SearchBar />
-            <ProductTable />
+            <ProductTable data={this.props.products} />
         </div>
+
         )
 
     }

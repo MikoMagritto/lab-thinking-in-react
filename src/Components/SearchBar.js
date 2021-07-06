@@ -8,7 +8,7 @@ class SearchBar extends Component {
         return (
             <form>
                 <label>Search</label>
-                <input type="search" />
+                <input type="search" value={this.props.query} onChange={this.props.handleQuery()} />
                 <label> Only show products on stock
                 <input type="checkbox" />
                 </label>
